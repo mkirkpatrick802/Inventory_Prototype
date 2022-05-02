@@ -16,8 +16,9 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            print("Pick Up");
+            _playerController.Interact();
         }
+
         _movementAxis = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 

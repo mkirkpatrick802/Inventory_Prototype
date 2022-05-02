@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 777c3d0d3d5524d4c8a21f7638f6663a, type: 3}
-  m_Name: Scroll
+  m_Name: MossyRock
   m_EditorClassIdentifier: 
-  name: Scroll
-  icon: {fileID: 21300000, guid: 0bdfcea3af454294ea23d9c14e0a9348, type: 3}
-  itemType: 3
-  price: 2
-  cost: 5
+  name: Mossy Rock
+  icon: {fileID: 21300000, guid: 36cd4d57bc8cd7247a3dd1183d07a569, type: 3}
+  itemType: 2
   isStackable: 1
   amount: 1
+  price: 1
+  cost: 1

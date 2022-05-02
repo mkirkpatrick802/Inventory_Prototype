@@ -8,7 +8,7 @@ public class Spell : Item
     [Header("Combat Settings")]
     public int damage;
     public float cooldown;
-    public float duation;
+    public float duration;
 
     [Space(15)]
     public SpellComponent[] recipe;
