@@ -1,8 +1,5 @@
 using System;
-using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Inventory
 {
@@ -32,8 +29,7 @@ public class Inventory
                 break;
             }
 
-            if (itemAlreadyInInventory) return;
-            _itemList.Add(item);
+            if (!itemAlreadyInInventory) _itemList.Add(item);
         }
         else
         {

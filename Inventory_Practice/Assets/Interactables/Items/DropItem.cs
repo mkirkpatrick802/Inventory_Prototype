@@ -22,7 +22,7 @@ public class DropItem : Interactable
     private void Awake()
     {
         _sprite = GetComponent<SpriteRenderer>();
-        _text = GameObject.Find("Amount").GetComponent<TextMeshPro>();
+        _text = transform.Find("Amount").GetComponent<TextMeshPro>();
     }
 
     private void SetItem(Item item)

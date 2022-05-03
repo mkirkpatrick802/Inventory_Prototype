@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         //Spawn UI Elements
         _pauseMenu = Instantiate(ReferenceManager.instance.pauseMenu).gameObject;
-        _pauseMenu.GetComponentInChildren<InventoryUI>();
+        _pauseMenu.GetComponentInChildren<InventoryUI>().SetInventoryUI(_inventory);
         _pauseMenu.gameObject.SetActive(false);
     }
 
