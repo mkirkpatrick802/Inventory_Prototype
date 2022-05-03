@@ -41,4 +41,9 @@ public class DropItem : Interactable
         }
     }
 
+    public override Item Interact()
+    {
+        Destroy(gameObject);
+        return _item;
+    }
 }

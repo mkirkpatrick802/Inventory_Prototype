@@ -19,6 +19,11 @@ public class PlayerInput : MonoBehaviour
             _playerController.Interact();
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            _playerController.Escape();
+        }
+
         _movementAxis = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 
