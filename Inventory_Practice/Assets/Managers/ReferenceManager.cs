@@ -20,5 +20,4 @@ public class ReferenceManager : MonoBehaviour
     }
 
     public Transform dropItem;
-    public Transform pauseMenu;
 }

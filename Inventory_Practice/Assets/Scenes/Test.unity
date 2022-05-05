@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 589142437}
   - component: {fileID: 589142436}
   - component: {fileID: 589142435}
+  - component: {fileID: 589142439}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -360,7 +361,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _moveSpeed: 250
-  _inventorySize: 35
 --- !u!50 &589142437
 Rigidbody2D:
   serializedVersion: 4
@@ -408,6 +408,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &589142439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589142432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c2a7cc1e84e12419bc40a68da35444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventorySize: 0
+  _inventoryMenu: {fileID: 4012503058761119201, guid: cd5d3f116d122024db7650a34fad36a9, type: 3}
 --- !u!1001 &749808784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -706,7 +720,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropItem: {fileID: 3847001099224353728, guid: d2b65df2a83540e44b5343e43966f852, type: 3}
-  pauseMenu: {fileID: 4012503058761119213, guid: cd5d3f116d122024db7650a34fad36a9, type: 3}
 --- !u!4 &1851337552
 Transform:
   m_ObjectHideFlags: 0

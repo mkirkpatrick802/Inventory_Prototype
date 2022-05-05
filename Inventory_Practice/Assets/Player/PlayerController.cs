@@ -9,25 +9,13 @@ public class PlayerController : MonoBehaviour
     [Header("Basic Movement")]
     [SerializeField] private float _moveSpeed;
 
-    [Header("Inventory Settings")]
-    [SerializeField] private int _inventorySize;
-
     private Rigidbody2D _rb;
-    private Inventory _inventory;
-    private GameObject _pauseMenu;
+    private InventoryHolder _inventoryHolder;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _inventory = new Inventory(_inventorySize);
-    }
-
-    private void Start()
-    {
-        //Spawn UI Elements
-        _pauseMenu = Instantiate(ReferenceManager.instance.pauseMenu).gameObject;
-        _pauseMenu.GetComponentInChildren<InventoryUI>().SetInventoryUI(_inventory);
-        _pauseMenu.gameObject.SetActive(false);
+        _inventoryHolder = GetComponent<InventoryHolder>();
     }
 
     public void Movement(Vector2 movementAxis)
@@ -46,20 +34,12 @@ public class PlayerController : MonoBehaviour
         Item pickedUpItem = interactable.GetComponent<Interactable>().Interact(); // If Interactable is an item it will return the item else it will return null
 
         if (pickedUpItem == null) return;
-        _inventory.AddItem(pickedUpItem);
+        _inventoryHolder.AddItem(pickedUpItem);
     }
 
     public void Escape()
     {
-        if (_pauseMenu.activeSelf)
-        {
-            Time.timeScale = 1;
-        }
-        else
-        {
-            Time.timeScale = 0;
-        }
-        _pauseMenu.SetActive(!_pauseMenu.activeSelf);
+        _inventoryHolder.SetInventoryActive(!_inventoryHolder.InventoryActive);
     }
 
     private void OnDrawGizmos()
